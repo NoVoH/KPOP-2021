@@ -1,0 +1,28 @@
+<mat-table [dataSource]="inhabitants" class="mat-elevation-z8">
+    
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+    <mat-cell *matCellDef="let inhabitants"> {{inhabitants.name.first}} {{inhabitants.name.last}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="gender">
+    <mat-header-cell *matHeaderCellDef> Gender </mat-header-cell>
+    <mat-cell *matCellDef="let inhabitants"> {{inhabitants.gender}} </mat-cell>
+  </ng-container>  
+
+  <ng-container matColumnDef="birthDate">
+    <mat-header-cell *matHeaderCellDef> Date of Birth</mat-header-cell>
+    <mat-cell *matCellDef="let inhabitants"> {{inhabitants.dob.date.split('T')[0]}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="age">
+    <mat-header-cell *matHeaderCellDef> Age </mat-header-cell>
+    <mat-cell *matCellDef="let inhabitants"> {{inhabitants.dob.age}} </mat-cell>
+  </ng-container>  
+ 
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"
+         (click)="onRowClicked(row)">
+</mat-row>
+
+</mat-table>

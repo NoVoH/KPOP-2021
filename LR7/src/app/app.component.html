@@ -1,0 +1,16 @@
+Ваше имя:<input type="text" [(ngModel)]="userData.name">
+<div *ngIf="!(nameErr==='')"  id="nameErr">{{nameErr}}</div>
+<hr>
+Номер телефона:<input type="text" [(ngModel)]="userData.phone">
+<div *ngIf="!(phoneErr==='')"  id="phoneErr">{{phoneErr}}</div>
+<hr>
+Ваш Email:<input type="text" [(ngModel)]="userData.email">
+<div *ngIf="!(emailErr==='')"  id="emailErr">{{emailErr}}</div>
+<hr>
+Сумма(руб.):<input type="text" [(ngModel)]="userData.total">
+<div *ngIf="!(totalErr==='')"  id="totalErr">{{totalErr}}</div>
+<hr>
+Сообщение:<input type="text" [(ngModel)]="userData.txtmsg">
+<div *ngIf="!(txtErr==='')"  id="txtErr">{{txtErr}}</div>
+<hr>
+<input type="button"  value="Отправить и оплатить!" (click)="checkData()">

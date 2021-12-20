@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>Info</h1>
+<div mat-dialog-content>
+  <ul>
+    <li>
+        <h3>Name: {{data.inhabitant.name.first}} {{data.inhabitant.name.last}} </h3>
+    </li>
+    <li>
+      <h3>Gender: {{data.inhabitant.gender}}</h3>
+  </li>
+    <li>
+        <h3>Date of Birth: {{data.inhabitant.dob.date.split('T')[0]}}</h3>
+    </li>
+    <li>
+      <h3>Age: {{data.inhabitant.dob.age}}</h3>
+  </li>
+  </ul>
+</div>
